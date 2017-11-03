@@ -30,7 +30,7 @@ public class WordCounter {
   public int getCount(final String word) {
 
     // TODO
-    return -1;
+    return theMap.get(word);
 
   }
 
