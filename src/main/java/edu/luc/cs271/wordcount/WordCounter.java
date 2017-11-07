@@ -25,7 +25,7 @@ public class WordCounter {
 
     while(words.hasNext()) {
       String Word = words.next();
-      theMap.put(Word, theMap.get(Word)+1);
+      theMap.put(Word, theMap.getOrDefault(Word,0) + 1);
     }
     System.out.println(theMap);
 
