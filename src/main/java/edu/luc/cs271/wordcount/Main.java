@@ -1,5 +1,6 @@
 package edu.luc.cs271.wordcount;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class Main {
@@ -24,6 +25,7 @@ public class Main {
     }
     WordCounter wordCounter = new WordCounter(userInput);
     // 2. use this to count the words in the input
+    System.out.print("test");
     wordCounter.countWords(words.listIterator());
     // 3. determine the size of the resulting map
     System.out.println(wordCounter.getCounts().size());
@@ -31,10 +33,15 @@ public class Main {
     List<Map<String,Integer>> arrayList = new ArrayList<>();
     arrayList.add(wordCounter.getCounts());
     // 5. store the map's entries in it (these are of type Map.Entry<String, Integer>
-    System.out.println(arrayList);
+    //System.out.println(arrayList);
     // 6. sort the ArrayList in descending order by count
     //    using Arrays.sort and an instance of the provided comparator (after fixing the latter)
+    //Arrays.sort(arrayList, new DescendingByCount());\\not working
     // 7. print the (up to) ten most frequent words in the text
-
+    System.out.println("test");
+    for (int i=0; i>10 ; i++) {
+      System.out.println("test");
+      System.out.println(arrayList.get(i));
+    }
   }
 }

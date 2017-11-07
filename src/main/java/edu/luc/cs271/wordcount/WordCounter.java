@@ -35,7 +35,12 @@ public class WordCounter {
   public int getCount(final String word) {
 
     // TODO
-    return theMap.get(word);
+    if (theMap.get(word)!= null) {
+      return theMap.get(word);
+    }
+    else {
+      return 0;
+    }
 
   }
 
