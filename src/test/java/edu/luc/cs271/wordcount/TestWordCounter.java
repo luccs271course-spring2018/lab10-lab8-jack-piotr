@@ -2,15 +2,14 @@ package edu.luc.cs271.wordcount;
 
 import static org.junit.Assert.*;
 
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-
 import java.util.Arrays;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Map;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 
 public class TestWordCounter {
 
@@ -40,7 +39,6 @@ public class TestWordCounter {
 
     WordCounter wordCounter1 = new WordCounter(map1);
     assertTrue(wordCounter1.getCounts().isEmpty());
-
   }
 
   @Test
@@ -49,13 +47,12 @@ public class TestWordCounter {
     // TODO run the SUT on a specific String iterator with some repeated words,
     // then use assertions to verify the correct counts
     // do this for at least two words in the iterator and two not in the iterator
-    Iterator<String> test =  Arrays.asList("one","two","one").iterator();
+    Iterator<String> test = Arrays.asList("one", "two", "one").iterator();
     WordCounter wordCounter1 = new WordCounter(map1);
     wordCounter1.countWords(test);
     Assert.assertEquals(wordCounter1.getCount("one"), 2);
     Assert.assertEquals(wordCounter1.getCount("two"), 1);
-    Assert.assertEquals(wordCounter1.getCount("zero"),0);
+    Assert.assertEquals(wordCounter1.getCount("zero"), 0);
     Assert.assertEquals(wordCounter1.getCount("hello"), 0);
-
   }
 }

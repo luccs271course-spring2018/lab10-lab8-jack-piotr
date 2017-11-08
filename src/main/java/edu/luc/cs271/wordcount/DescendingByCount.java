@@ -11,10 +11,9 @@ public class DescendingByCount implements Comparator<Map.Entry<String, Integer>>
 
       return r.getValue().compareTo(l.getValue());
 
-    }catch (NullPointerException e) {
+    } catch (NullPointerException e) {
       // TODO turn this into descending order using the getValue() method on l and r
       return l.getValue();
     }
-
   }
 }
