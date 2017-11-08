@@ -7,13 +7,14 @@ import java.util.Map;
 public class DescendingByCount implements Comparator<Map.Entry<String, Integer>> {
   @Override
   public int compare(final Map.Entry<String, Integer> l, final Map.Entry<String, Integer> r) {
+    try {
 
-    if (l.getValue() > r.getValue()) {
-      return -1;
-    } else if (l.getValue() < r.getValue()) {
-      return 1;
+      return r.getValue().compareTo(l.getValue());
+
+    }catch (NullPointerException e) {
+      // TODO turn this into descending order using the getValue() method on l and r
+      return l.getValue();
     }
-    // TODO turn this into descending order using the getValue() method on l and r
-    return 0;
+
   }
 }
